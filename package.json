@@ -1,0 +1,25 @@
+{
+  "name": "veille-ia-handicap",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "12.23.12",
+    "lottie-web": "5.12.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.6.0",
+    "vite": "6.4.4"
+  },
+  "overrides": {
+    "motion-dom": "12.23.12",
+    "motion-utils": "12.23.6"
+  }
+}

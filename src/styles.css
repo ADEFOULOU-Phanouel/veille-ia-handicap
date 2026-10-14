@@ -1,0 +1,308 @@
+/* =========================================================
+   Veille IA et handicap — feuille de style
+   Reprise du design d'origine, réorganisée en une seule couche
+   ========================================================= */
+
+/* ---------- 1. Jetons ---------- */
+:root {
+  --bg: #f1f5f9; --card: #fff; --ink: #0f172a; --soft: #475569; --line: #d9e2ec;
+  --ac: #4338ca; --onac: #fff; --ok: #065f46; --warn: #f59e0b;
+  --hero-c: #0f766e;
+  --sh: 0 1px 2px #0f172a14, 0 6px 18px #0f172a12;
+  --shh: 0 3px 6px #0f172a14, 0 16px 34px #0f172a26;
+  --display: Sora, Verdana, sans-serif;
+  --texte: "Atkinson Hyperlegible", Verdana, sans-serif;
+  --vite: 180ms;
+  /* Héro et bandes du haut */
+  --hero-bg: #eef2ff; --hero-ink: #0f172a; --hero-soft: #334155; --hero-accent: #4338ca;
+  --hero-hl: linear-gradient(90deg, #4338ca, #0f766e); --hero-souligne: linear-gradient(90deg, #4338ca, #0f766e);
+  --hero-champ-bord: #c7d2fe; --scene: #5b5fd6;
+  --bande: #e0e7ff; --bande-texte: #312e81; --bande-ligne: #c7d2fe;
+}
+.t-visuel { --c: #1d4ed8 } .t-auditif { --c: #7e22ce } .t-moteur { --c: #92400e } .t-parole { --c: #0f766e }
+.t-cognitif { --c: #065f46 } .t-psychique { --c: #be185d } .t-multiple { --c: #334155 }
+
+[data-theme=dark] {
+  --bg: #0b1120; --card: #131c31; --ink: #e8eefc; --soft: #a9b8d0; --line: #2a3856;
+  --ac: #a5b4fc; --onac: #0b1120; --ok: #6ee7b7; --sh: none; --shh: 0 10px 30px #0009;
+  --hero-bg: #161f38; --hero-ink: #e8eefc; --hero-soft: #c3cee3; --hero-accent: #a5b4fc;
+  --hero-hl: linear-gradient(90deg, #a5b4fc, #5eead4 55%, #fcd34d); --hero-souligne: linear-gradient(90deg, #a5b4fc, #5eead4);
+  --hero-champ-bord: #fff; --scene: #4f46e5;
+  --bande: #0b1120; --bande-texte: #c3cee3; --bande-ligne: #2a3856;
+}
+[data-theme=dark] .t-visuel { --c: #93c5fd } [data-theme=dark] .t-auditif { --c: #d8b4fe } [data-theme=dark] .t-moteur { --c: #fcd34d }
+[data-theme=dark] .t-parole { --c: #5eead4 } [data-theme=dark] .t-cognitif { --c: #6ee7b7 } [data-theme=dark] .t-psychique { --c: #f9a8d4 } [data-theme=dark] .t-multiple { --c: #cbd5e1 }
+
+[data-theme=contrast] {
+  --bg: #000; --card: #000; --ink: #fff; --soft: #fff; --line: #fff;
+  --ac: #ffe600; --onac: #000; --ok: #ffe600; --sh: none; --shh: none;
+  --hero-bg: #000; --hero-ink: #fff; --hero-soft: #fff; --hero-accent: #ffe600;
+  --hero-souligne: #ffe600; --hero-champ-bord: #ffe600; --scene: #000;
+  --bande: #000; --bande-texte: #fff; --bande-ligne: #fff;
+}
+[data-theme=contrast] :is(.card, .pill, .tag) { --c: #ffe600 }
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box }
+html { font-size: 18px; -webkit-text-size-adjust: 100% }
+body {
+  margin: 0; color: var(--ink); font-family: var(--texte); line-height: 1.6;
+  background:
+    radial-gradient(50rem 26rem at 92% 22rem, color-mix(in srgb, var(--ac) 9%, transparent), transparent),
+    radial-gradient(40rem 24rem at 0 60rem, color-mix(in srgb, var(--hero-c) 8%, transparent), transparent),
+    var(--bg);
+}
+body.dys { letter-spacing: .06em; word-spacing: .18em; line-height: 1.95 }
+body.dys .txt, body.dys .why { max-width: 62ch }
+a { color: var(--ac) }
+:focus-visible { outline: 3px solid var(--ac); outline-offset: 2px }
+.skip { position: absolute; left: -999px }
+.skip:focus { left: 8px; top: 8px; background: var(--ac); color: var(--onac); padding: 8px; z-index: 99 }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
+.wrap { max-width: 70rem; margin: 0 auto; padding: 0 1rem }
+.ic { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none }
+h1, h2, h3 { overflow-wrap: anywhere; hyphens: auto }
+
+button, select, input { font: inherit; color: inherit }
+button, select {
+  font-size: .88rem; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: 99px;
+  padding: .25rem .85rem; min-height: 44px; cursor: pointer; transition: background var(--vite), border-color var(--vite), transform var(--vite);
+}
+button:hover, select:hover { border-color: var(--ac) }
+button[aria-pressed=true] { background: var(--ac); color: var(--onac); border-color: var(--ac) }
+
+/* ---------- 3. Bandeau défilant ---------- */
+.ticker { position: relative; background: var(--bande); color: var(--bande-texte); display: flex; align-items: center; overflow: hidden; font-size: .82rem; height: 2.2rem; border-bottom: 1px solid var(--bande-ligne) }
+.ticker::before, .ticker::after { content: ""; position: absolute; top: 0; bottom: 0; width: 3rem; z-index: 1; pointer-events: none }
+.ticker::before { left: 0; background: linear-gradient(90deg, var(--bande), transparent) }
+.ticker::after { right: 0; background: linear-gradient(-90deg, var(--bande), transparent) }
+.track { display: flex; white-space: nowrap; animation: tk 60s linear infinite }
+.track span { padding-right: 1rem }
+.ticker:hover .track { animation-play-state: paused }
+@keyframes tk { to { transform: translateX(-50%) } }
+
+/* ---------- 3 bis. Barre de navigation (fixée en haut) ---------- */
+.barre { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--hero-bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--bande-ligne); color: var(--hero-ink) }
+.barre .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.6rem }
+.logo { display: inline-flex; align-items: center; gap: .5rem; color: var(--hero-ink); text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 1.02rem; white-space: nowrap }
+.logo .ic { width: 1.4rem; height: 1.4rem; color: var(--hero-accent) }
+.onglets { display: flex; gap: .2rem }
+.onglets a { position: relative; display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; padding: 0 .75rem; color: var(--hero-soft); text-decoration: none; font-weight: 700; font-size: .9rem; transition: color var(--vite) }
+.onglets a:hover, .onglets a[aria-current=page] { color: var(--hero-ink) }
+.onglets a[aria-current=page]::after { content: ""; position: absolute; left: .75rem; right: .75rem; bottom: 4px; height: 3px; border-radius: 3px; background: var(--hero-souligne) }
+.pastille { display: inline-grid; place-items: center; min-width: 1.25rem; height: 1.25rem; padding: 0 .3rem; border-radius: 99px; background: #fcd34d; color: #0f172a; font-size: .72rem; font-weight: 800 }
+
+/* ---------- 4. Bandeau principal (héro clair) ---------- */
+.hero { position: relative; overflow: hidden; color: var(--hero-ink); background: var(--hero-bg); padding: 2.2rem 0 2.8rem; border-bottom: 1px solid var(--bande-ligne) }
+.hero > .wrap { position: relative; z-index: 1 }
+[data-theme=contrast] .hero { border-bottom: 3px solid #fff }
+.kick { font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--hero-accent); margin: 0 0 .2rem }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(1.9rem, 6vw, 3.3rem); line-height: 1.1; letter-spacing: -.02em; margin: .5rem 0 .4rem; max-width: 20ch }
+.hl { background: var(--hero-hl); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent }
+[data-theme=contrast] .hl { background: none; -webkit-text-fill-color: #ffe600; color: #ffe600 }
+.tag-line { margin: 0 0 1rem; max-width: 34rem; color: var(--hero-soft) }
+.search { display: flex; gap: .5rem; align-items: stretch; max-width: 32rem; margin-top: 1.2rem }
+.search-champ { position: relative; flex: 1 }
+.search-champ .ic { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #475569 }
+.search input { width: 100%; border: 2px solid var(--hero-champ-bord); border-radius: 99px; padding: .6rem 1.1rem .6rem 2.7rem; background: #fff; color: #0f172a; min-height: 2.8rem; transition: border-color var(--vite) }
+.search input:hover, .search input:focus { border-color: var(--hero-accent) }
+[data-theme=contrast] .search input { border-color: #ffe600 }
+.btn-filtres { position: relative; display: grid; place-items: center; width: 2.8rem; min-height: 2.8rem; padding: 0; border-radius: 99px; border: 2px solid var(--hero-accent); background: var(--card); color: var(--hero-accent) }
+.btn-filtres:hover { background: var(--hero-accent); color: var(--onac) }
+.btn-filtres .ic { width: 1.25rem; height: 1.25rem }
+.btn-filtres .pastille { position: absolute; top: -.35rem; right: -.35rem }
+
+/* Animation : scène en arche indigo à droite du titre */
+.scene { position: absolute; right: 3%; bottom: 0; width: min(28rem, 38%); height: 92%; z-index: 0; pointer-events: none; display: flex; align-items: flex-end; justify-content: center }
+.scene::before { content: ""; position: absolute; inset: 0; background: var(--scene); border-radius: 999px 999px 0 0 }
+.anim-hero { position: relative; width: 84%; margin-bottom: 2%; aspect-ratio: 914 / 588 }
+@media (max-width: 64rem) { .scene { display: none } }
+[data-theme=contrast] .scene { display: none }
+
+/* ---------- 5. Réglages, fenêtre et volet ---------- */
+/* Icône de réglage dans le pied de page */
+.foot-ligne { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: .5rem 2rem }
+.btn-reglages { display: inline-flex; align-items: center; gap: .5rem; flex: none; font-weight: 700; border-radius: 12px }
+.btn-reglages .ic { width: 1.3rem; height: 1.3rem; color: var(--ac); transition: transform .4s ease }
+.btn-reglages:hover .ic { transform: rotate(60deg) }
+
+/* Fenêtre par-dessus la page (<dialog>) */
+.dialogue {
+  border: 1px solid var(--line); border-radius: 18px; padding: 0; max-width: calc(100vw - 2rem); width: 24rem;
+  background: var(--card); color: var(--ink); box-shadow: 0 24px 60px #0f172a59;
+  opacity: 1; transform: none; transition: opacity .2s ease, transform .2s ease, overlay .2s allow-discrete, display .2s allow-discrete;
+}
+.dialogue:not([open]) { opacity: 0; transform: translateY(8px) scale(.98) }
+@starting-style { .dialogue[open] { opacity: 0; transform: translateY(8px) scale(.98) } }
+.dialogue::backdrop { background: #0f172a8c; backdrop-filter: blur(3px); transition: opacity .2s ease, overlay .2s allow-discrete, display .2s allow-discrete }
+.dialogue:not([open])::backdrop { opacity: 0 }
+@starting-style { .dialogue[open]::backdrop { opacity: 0 } }
+[data-theme=dark] .dialogue { background: #1b2540; border-color: #3a4c6e }
+.dialogue-corps { padding: .4rem 0 .6rem }
+.dialogue-tete { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .3rem .6rem .3rem 1.1rem }
+.dialogue-tete h2 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 1rem }
+.dialogue-fermer { display: grid; place-items: center; width: 44px; padding: 0; border-color: transparent; background: none }
+.dialogue-fermer .ic { width: 1.3rem; height: 1.3rem }
+
+/* Variante : barre latérale qui glisse depuis la droite */
+.dialogue.volet {
+  margin: 0 0 0 auto; height: 100dvh; max-height: 100dvh; width: min(22rem, 88vw); border-radius: 18px 0 0 18px; border-right: 0;
+  transition: transform .28s ease, overlay .28s allow-discrete, display .28s allow-discrete;
+}
+.dialogue.volet:not([open]) { opacity: 1; transform: translateX(100%) }
+@starting-style { .dialogue.volet[open] { opacity: 1; transform: translateX(100%) } }
+.dialogue.volet .dialogue-corps { min-height: 100%; display: flex; flex-direction: column; padding-bottom: 1rem }
+.volet-filtres { padding: 0 1.1rem; flex: 1 }
+.volet-filtres .p-top { flex-direction: column; align-items: flex-start }
+.volet-filtres .compte { display: none }
+.volet-filtres .ghost { margin-left: 0 }
+.volet-filtres .p-grid { grid-template-columns: minmax(0, 1fr) }
+.volet-ok { margin: 1rem 1.1rem 0; justify-content: center }
+
+/* Résumé des filtres sur mobile (à la place du panneau) */
+.resume-mobile { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; margin-top: 1rem; font-size: .9rem; color: var(--soft) }
+.resume-mobile p { margin: 0 }
+.resume-mobile .ghost { margin-left: 0 }
+
+.reglage { display: flex; align-items: center; gap: .8rem; padding: .7rem 1.1rem; border-top: 1px solid var(--line) }
+.reglage > .ic { color: var(--soft); width: 1.3rem; height: 1.3rem }
+.reglage-txt { flex: 1; display: flex; flex-direction: column; font-weight: 700; font-size: .92rem; line-height: 1.3 }
+.reglage-txt small { font-weight: 400; color: var(--soft); font-size: .78rem; margin-top: .15rem }
+
+/* Interrupteur à glisser */
+.switch {
+  position: relative; flex: none; width: 3.2rem; min-height: 0; height: 1.9rem; padding: 0; border-radius: 99px;
+  border: 2px solid var(--ac); background: var(--line); transition: background var(--vite), border-color var(--vite);
+}
+.switch::before { content: ""; position: absolute; inset: -.5rem -.3rem } /* zone tactile ≥ 44 px */
+.switch-pastille {
+  position: absolute; top: 50%; left: .2rem; width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  background: var(--soft); transform: translateY(-50%); transition: transform 220ms ease, background var(--vite);
+}
+.switch[aria-checked=true] { background: var(--ac) }
+.switch[aria-checked=true] .switch-pastille { background: var(--onac); transform: translate(1.3rem, -50%) }
+
+/* ---------- 6. Panneau de filtres ---------- */
+.panel {
+  position: relative; z-index: 2; margin-top: 1.6rem; background: var(--card); border: 1px solid var(--line);
+  border-radius: 22px; box-shadow: 0 10px 40px #0f172a1c; padding: 1.1rem 1.3rem;
+}
+[data-theme=dark] .panel { background: color-mix(in srgb, var(--card) 90%, #fff); border-color: #3a4c6e }
+.p-top { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; padding-bottom: .9rem; margin-bottom: .9rem; border-bottom: 1px solid var(--line) }
+.p-top label { display: flex; gap: .5rem; align-items: center; font-size: .88rem; color: var(--soft) }
+.compte { margin: 0; font-size: .85rem; color: var(--soft) }
+.ghost { margin-left: auto; border-style: dashed }
+.p-grid { display: grid; gap: 1.1rem 2rem; grid-template-columns: minmax(0, 1fr) }
+@media (min-width: 56rem) { .p-grid { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) } }
+.p-grid > div { min-width: 0 }
+.fl { margin: 0 0 .35rem; font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--soft) }
+.row { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; margin: 0 }
+.pill .n { opacity: .75; font-variant-numeric: tabular-nums }
+.pill:hover { transform: translateY(-1px) }
+.pill.t::before { content: ""; display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; background: var(--c); margin-right: .4rem; border: 1px solid var(--card) }
+
+/* ---------- 7. Cartes ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); gap: 1.1rem; margin-top: 1.3rem }
+.card {
+  position: relative; overflow: hidden; min-width: 0; display: flex; flex-direction: column; gap: .5rem;
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 1.3rem 1.4rem; box-shadow: var(--sh);
+  transition: box-shadow .2s, transform .2s;
+}
+.card::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 40%, #fff)) }
+.card:hover, .card:focus-within { transform: translateY(-3px); box-shadow: 0 20px 44px color-mix(in srgb, var(--c) 22%, transparent) }
+.card .titre { font-family: var(--display); font-size: 1.15rem; line-height: 1.3; margin: 0; padding-right: 3.2rem }
+.card .titre a { color: var(--ink); text-decoration: none }
+.card .titre a:hover { text-decoration: underline; color: var(--c) }
+.orig { margin: 0; font-size: .82rem; color: var(--soft); font-style: italic }
+
+.card.une { grid-column: 1 / -1; padding: 1.9rem 2rem; background: linear-gradient(120deg, color-mix(in srgb, var(--c) 10%, var(--card)), var(--card) 60%) }
+.card.une .titre { font-size: clamp(1.4rem, 3.5vw, 2rem); padding-right: 5rem }
+.une-label { margin: 0; padding-right: 5.4rem; font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--c) }
+
+.cico {
+  position: absolute; top: 1.1rem; right: 1.1rem; width: 2.7rem; height: 2.7rem; border-radius: 14px; display: grid; place-items: center;
+  color: var(--c); background: color-mix(in srgb, var(--c) 14%, var(--card)); transition: transform .25s;
+}
+.card:hover .cico { transform: rotate(-6deg) scale(1.08) }
+.cico svg { width: 58%; height: 58%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round }
+.card.une .cico { width: 4rem; height: 4rem; border-radius: 20px; top: 1.6rem; right: 1.6rem }
+
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding-right: 3.4rem }
+.card.une .tags { padding-right: 5.4rem }
+.tag { border-radius: 99px; padding: .05rem .7rem; font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; background: color-mix(in srgb, var(--c) 15%, var(--card)); color: var(--c); border: 1.5px solid color-mix(in srgb, var(--c) 40%, var(--card)) }
+.tag.mat { background: none; color: var(--soft); border-color: var(--line) }
+
+.meta { display: flex; flex-wrap: wrap; gap: .3rem .6rem; align-items: center; color: var(--soft); font-size: .82rem }
+.sw { display: inline-flex; align-items: center; gap: .4rem; white-space: nowrap }
+.ring { width: 2.3rem; height: 2.3rem; border-radius: 50%; display: inline-grid; place-items: center; background: conic-gradient(var(--ok) calc(var(--p) * 1%), var(--line) 0) }
+.ring span { width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--card); display: grid; place-items: center; font-weight: 700; font-size: .75rem; color: var(--ink) }
+
+.txt { margin: .1rem 0; font-size: 1.02em }
+.card.une .txt { max-width: 70ch }
+
+/* Aides de lecture sous le texte */
+.aides { display: flex; flex-wrap: wrap; gap: .2rem 1rem; margin-top: -.1rem }
+.aide {
+  display: inline-flex; align-items: center; gap: .4rem; border: 0; background: none; padding: .2rem 0; border-radius: 6px;
+  color: var(--ac); font-weight: 700; font-size: .85rem; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--ac) 40%, transparent); text-underline-offset: .25em;
+}
+.aide:hover { text-decoration-color: currentColor }
+.aide[aria-expanded=true], .aide.actif { background: none; color: var(--ac) }
+.txt.simple { background: color-mix(in srgb, var(--ac) 10%, var(--card)); border-left: 4px solid var(--ac); border-radius: 8px; padding: .6rem .8rem; font-size: 1.05em; margin: .3rem 0 .2rem }
+.txt.simple::before { content: "Version simplifiée"; display: block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ac) }
+
+.why { display: flex; gap: .6rem; background: color-mix(in srgb, var(--warn) 16%, var(--card)); border: 1.5px solid color-mix(in srgb, var(--warn) 55%, var(--card)); border-radius: 12px; padding: .6rem .8rem; font-size: .92rem }
+.why > .ic { margin-top: .2rem; color: color-mix(in srgb, var(--warn) 70%, var(--ink)) }
+.why b { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .07em }
+[data-theme=contrast] .why { background: #000; border-color: #ffe600 }
+[data-theme=contrast] .why > .ic { color: #ffe600 }
+
+details.note { font-size: .85rem; color: var(--soft) }
+details.note summary { cursor: pointer; font-weight: 700; color: var(--ink); min-height: 44px; display: flex; align-items: center; width: fit-content }
+details.note p { margin: 0 0 .3rem }
+
+.act { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: auto; padding-top: .3rem }
+.btn { display: inline-flex; align-items: center; gap: .45rem; font-size: .82rem; font-weight: 700; text-decoration: none; min-height: 44px; padding: .3rem .95rem; border-radius: 99px; border: 2px solid var(--line); background: var(--card); color: var(--ink) }
+.btn.primaire { background: var(--ac); border-color: var(--ac); color: var(--onac) }
+.btn.primaire:hover { filter: brightness(1.1) }
+.btn[aria-pressed=true] { background: color-mix(in srgb, var(--ac) 14%, var(--card)); color: var(--ink); border-color: var(--ac) }
+.btn .ic { width: 1rem; height: 1rem }
+
+.status { border: 2px dashed var(--line); border-radius: 14px; padding: 1rem; grid-column: 1 / -1; margin: 0 }
+.more { display: block; margin: 1.4rem auto }
+.fav-t { font-family: var(--display); margin: 2rem 0 0 }
+
+/* Squelettes de chargement */
+.squelette { min-height: 14rem }
+.sk { display: block; height: .9rem; border-radius: 6px; background: linear-gradient(90deg, var(--line) 0 40%, color-mix(in srgb, var(--line) 50%, var(--card)) 50%, var(--line) 60% 100%); background-size: 300% 100%; animation: skl 1.4s linear infinite }
+.sk-t { height: 1.6rem; width: 85% } .sk-s { width: 55% }
+@keyframes skl { from { background-position: 100% 0 } to { background-position: 0 0 } }
+
+/* ---------- 8. Pied de page ---------- */
+.foot { margin-top: 3rem; background: linear-gradient(90deg, #4338ca, #0f766e, #f59e0b) top / 100% 3px no-repeat, color-mix(in srgb, var(--ink) 6%, var(--bg)); padding: 2.5rem 0; color: var(--soft); font-size: .92rem }
+.foot .brand { display: flex; align-items: center; gap: .6rem; font-family: var(--display); font-weight: 800; color: var(--ink); font-size: 1.15rem; margin: 0 0 .5rem }
+.foot .brand .ic { width: 1.6rem; height: 1.6rem; color: var(--ac) }
+.foot p { margin: .2rem 0 .8rem; max-width: 40rem }
+.foot .legal { border-top: 1px solid var(--line); padding-top: 1rem; font-size: .82rem; margin: 1.5rem 0 0; max-width: none }
+
+/* ---------- 9. Petits écrans ---------- */
+@media (max-width: 40rem) {
+  .barre .wrap { gap: .5rem }
+  .logo { font-size: .85rem; gap: .35rem } .logo .ic { width: 1.15rem; height: 1.15rem }
+  .onglets a { padding: 0 .45rem; font-size: .85rem }
+  .onglets a[aria-current=page]::after { left: .45rem; right: .45rem }
+  .hero { padding: 1.5rem 0 2.4rem }
+  .tag-line { font-size: .95rem; margin-bottom: .6rem }
+  .card.une { padding: 1.3rem } .card.une .cico { width: 3rem; height: 3rem; top: 1rem; right: 1rem; border-radius: 14px }
+  .card.une .titre { padding-right: 3.4rem; font-size: 1.35rem } .card.une .tags, .une-label { padding-right: 3.6rem }
+  .ghost { margin-left: 0 }
+}
+
+/* ---------- 10. Mouvement ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important }
+  .card:hover { transform: none }
+}
+body.calme *, body.calme *::before, body.calme *::after { animation: none !important }
+body.calme .card:hover { transform: none }
+
