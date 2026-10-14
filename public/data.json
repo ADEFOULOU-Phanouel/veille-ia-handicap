@@ -3,107 +3,55 @@
   "articles": [
     {
       "titre": "A Hybrid Kinematic GCN and Elastic Transformer for Efficient Indian Sign Language Recognition",
-      "titre_fr": "Modèle hybride Kinematic GCN et Elastic Transformer pour la reconnaissance de la langue des signes indienne",
+      "titre_fr": "Cadre hybride Kinematic GCN et Elastic Transformer pour la reconnaissance de la langue des signes indienne",
       "url": "https://arxiv.org/abs/2610.14680v1",
       "date": "2026-10-10T07:50:57.000Z",
-      "pertinence": 9,
-      "justification_pertinence": "L'article présente un modèle d'IA spécifique conçu pour améliorer la reconnaissance automatique de la langue des signes indienne.",
+      "pertinence": 10,
+      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour la reconnaissance de la langue des signes, un outil essentiel pour la communication des personnes sourdes ou malentendantes.",
       "type_handicap": "auditif",
       "maturite": "recherche",
-      "resume": "Ce projet propose un cadre technologique innovant pour reconnaître la langue des signes indienne malgré les variations de vitesse et la complexité des mouvements des mains. En utilisant un système hybride combinant un Elastic Transformer et un GCN adaptatif, le modèle capture précisément les gestes bimanuels. Les chercheurs ont validé cette approche sur une base de données conséquente, offrant ainsi une solution performante pour modéliser cette langue visuelle.",
-      "pourquoi_important": "Cette innovation facilite la communication en automatisant la traduction de la langue des signes, levant une barrière majeure pour les utilisateurs.",
-      "resume_simple": "Des chercheurs ont créé une intelligence artificielle capable de comprendre la langue des signes indienne. Ce système analyse avec précision les mouvements complexes des mains. Cela permet de mieux traduire les échanges gestuels en langage écrit."
+      "resume": "Cette recherche propose un modèle hybride innovant pour interpréter la langue des signes indienne, caractérisée par une structure bimanuelle complexe. En utilisant un échantillonnage dynamique et un transformeur élastique, le système compense les variations de vitesse dans les gestes. Ce cadre atteint une précision de 89,8 % sur un vaste jeu de données, offrant une solution technique robuste pour la reconnaissance automatisée des signes.",
+      "pourquoi_important": "Cette innovation améliore l'efficacité des outils de traduction automatique en langue des signes en gérant mieux les spécificités gestuelles et rythmiques.",
+      "resume_simple": "Ce projet d'intelligence artificielle traduit les gestes de la langue des signes indienne. Il comprend mieux les mouvements rapides et les signes faits avec deux mains. Cette technologie facilite la communication pour les personnes sourdes."
     },
     {
       "titre": "Self-Supervised Speech Representations for Cross-Speaker Dysarthria Detection During Awake Craniotomy",
-      "titre_fr": "Représentations vocales auto-supervisées pour détecter la dysarthrie durant une craniotomie",
+      "titre_fr": "Détection automatique de la dysarthrie durant une craniotomie éveillée par IA",
       "url": "https://arxiv.org/abs/2610.11825v1",
       "date": "2026-10-08T12:25:15.000Z",
       "pertinence": 9,
-      "justification_pertinence": "L'article présente un pipeline IA spécifique pour détecter les troubles de la parole chez des patients en situation de handicap temporaire.",
+      "justification_pertinence": "L'article présente une solution d'IA spécifique pour détecter un trouble de la parole en milieu chirurgical.",
       "type_handicap": "parole_communication",
       "maturite": "recherche",
-      "resume": "Cette étude développe une méthode basée sur l'IA pour identifier les troubles de la parole, appelés dysarthries, durant des chirurgies cérébrales éveillées. Le système utilise des techniques de traitement automatique du langage et des modèles wav2vec 2.0 pour isoler la voix du patient malgré les bruits ambiants du bloc opératoire. Les résultats démontrent qu'une représentation robuste des données vocales améliore significativement la détection des difficultés d'élocution.",
-      "pourquoi_important": "Cette innovation permet de préserver les fonctions linguistiques des patients lors d'interventions chirurgicales complexes grâce à une surveillance automatisée.",
-      "resume_simple": "Des chercheurs ont créé un outil IA capable de détecter les troubles de la parole pendant une opération du cerveau. Ce système filtre les bruits pour mieux comprendre le patient. Cela aide les médecins à protéger la capacité du patient à communiquer."
+      "resume": "Cette étude explore une méthode automatique pour détecter les troubles de la parole, appelés dysarthries, lors d'opérations du cerveau réalisées sous craniotomie éveillée. En combinant des outils de diarisation, des représentations sonores wav2vec 2.0 et des classifieurs, les chercheurs améliorent la précision du diagnostic malgré le bruit ambiant. Les résultats démontrent que la qualité des représentations vocales est cruciale pour identifier ces altérations du langage en temps réel durant l'intervention.",
+      "pourquoi_important": "Cette innovation permet de préserver les fonctions langagières des patients lors d'interventions chirurgicales cérébrales complexes.",
+      "resume_simple": "Des chercheurs ont créé un système d'IA pour détecter les troubles de la parole pendant les chirurgies du cerveau. Cet outil aide les médecins à surveiller les facultés de langage du patient en direct. Cela permet une meilleure protection des capacités d'élocution durant l'opération."
     },
     {
       "titre": "SPDAlign: Interpretable Riemannian Alignment for EEG Forward Modeling Shifts",
-      "titre_fr": "SPDAlign : alignement sur variété riemannienne pour les interfaces cerveau-machine EEG",
+      "titre_fr": "SPDAlign : alignement sur variété Riemannienne pour les interfaces cerveau-machine EEG",
       "url": "https://arxiv.org/abs/2610.06315v1",
       "date": "2026-10-05T13:32:26.000Z",
-      "pertinence": 9,
-      "justification_pertinence": "L'article porte directement sur l'amélioration des interfaces cerveau-machine destinées à la rééducation et à la communication pour pallier des handicaps.",
-      "type_handicap": "multiple",
-      "maturite": "recherche",
-      "resume": "Cette étude présente SPDAlign, un cadre d'apprentissage automatique conçu pour stabiliser les données EEG dans les interfaces cerveau-machine. En utilisant des transformations linéaires sur la variété des matrices symétriques définies positives, cette méthode corrige les variations entre sujets sans nécessiter de calibration coûteuse. Cette innovation facilite l'utilisation pratique de ces dispositifs pour des applications de rééducation et de communication en compensant la variabilité naturelle des signaux cérébraux.",
-      "pourquoi_important": "Cette technologie améliore la fiabilité des interfaces cerveau-machine, rendant leur usage plus accessible et efficace pour les personnes en situation de handicap.",
-      "resume_simple": "Des chercheurs ont créé un outil pour mieux interpréter les signaux du cerveau. Il aide les appareils de communication et de rééducation à mieux fonctionner. Cette technologie permet une meilleure fiabilité pour les utilisateurs sans réglages complexes."
-    },
-    {
-      "titre": "Autonomous Robotic Navigation for Endovascular Brain-Computer Interface Access",
-      "titre_fr": "Navigation robotique autonome pour l'installation d'interfaces cerveau-machine endovasculaires",
-      "url": "https://arxiv.org/abs/2610.03537v1",
-      "date": "2026-10-02T16:20:29.000Z",
       "pertinence": 8,
-      "justification_pertinence": "L'article porte sur une technologie robotique visant à faciliter l'accès aux interfaces cerveau-machine, lesquelles permettent de compenser des handicaps moteurs lourds.",
+      "justification_pertinence": "L'article traite d'une amélioration technique cruciale pour la fiabilité des interfaces cerveau-machine destinées à la rééducation et à la communication.",
       "type_handicap": "moteur",
       "maturite": "recherche",
-      "resume": "Cette étude présente une méthode de navigation robotique autonome pour implanter des interfaces cerveau-machine par voie endovasculaire, évitant ainsi la chirurgie crânienne invasive. Les chercheurs ont utilisé des contrôleurs par renforcement pour guider des dispositifs dans le réseau veineux cérébral avec un taux de réussite satisfaisant lors d'essais in vitro. Ces travaux marquent une avancée vers une mise en place plus sécurisée des interfaces destinées à restaurer des fonctions motrices.",
-      "pourquoi_important": "Cette innovation pourrait simplifier et sécuriser l'accès aux interfaces cerveau-machine, essentielles pour restaurer l'autonomie des personnes en situation de handicap moteur sévère.",
-      "resume_simple": "Des chercheurs ont testé un robot capable d'installer automatiquement des implants cérébraux par les veines. Cette technique évite d'ouvrir le crâne pour placer l'implant. Cela permet de rendre plus accessibles les technologies d'assistance pour le handicap."
+      "resume": "L'étude présente SPDAlign, une méthode permettant de stabiliser les données d'électroencéphalographie pour les interfaces cerveau-machine. En corrigeant les décalages de distribution liés à la géométrie de la tête sans nécessiter d'étalonnage fastidieux, cette technique améliore la précision des modèles. Cette avancée rend ces dispositifs de communication et de rééducation plus efficaces et plus simples à utiliser pour les patients en compensant la variabilité naturelle des signaux cérébraux.",
+      "pourquoi_important": "Cette innovation permet de rendre les interfaces cerveau-machine plus robustes et accessibles en réduisant la complexité de leur calibration.",
+      "resume_simple": "Cette recherche améliore le fonctionnement des outils qui permettent de contrôler des machines par la pensée. Elle rend ces systèmes plus fiables en corrigeant les variations des signaux cérébraux entre les utilisateurs. Cela facilite l'utilisation de technologies d'assistance pour la communication ou la rééducation."
     },
     {
       "titre": "GrammarRL: Effective Grammar-Constrained Decoding via Reinforcement Learning",
-      "titre_fr": "GrammarRL : optimisation par apprentissage par renforcement pour la traduction en langue des signes",
+      "titre_fr": "GrammarRL : optimisation par renforcement pour la traduction en langue des signes",
       "url": "https://arxiv.org/abs/2609.39869v1",
       "date": "2026-09-30T14:49:23.000Z",
       "pertinence": 8,
-      "justification_pertinence": "L'article présente une méthode d'IA spécifiquement évaluée pour la traduction en langue des signes, outil essentiel pour l'accessibilité.",
+      "justification_pertinence": "L'article présente explicitement une application de GrammarRL pour la traduction de gloss en langue des signes.",
       "type_handicap": "auditif",
       "maturite": "recherche",
-      "resume": "L'étude présente GrammarRL, une méthode d'apprentissage par renforcement visant à améliorer la précision syntaxique des modèles de langage sous contraintes. Cette approche ajuste les modèles sans nécessiter de données annotées en combinant deux récompenses d'auto-apprentissage complémentaires. Les tests effectués sur la traduction en langue des signes démontrent une amélioration significative des performances tout en maintenant une efficacité de calcul optimale par rapport aux méthodes classiques.",
-      "pourquoi_important": "Cette innovation améliore la qualité et la fiabilité des traductions automatiques en langue des signes pour les personnes sourdes ou malentendantes.",
-      "resume_simple": "Cette technologie aide les ordinateurs à mieux traduire la langue des signes. Elle rend les traductions plus précises et plus naturelles. Cette méthode est plus performante que les outils habituels."
-    },
-    {
-      "titre": "NEUROTOKEN: Joint Source and Directional AAD with Envelope Decoding via Conditional Flow Matching",
-      "titre_fr": "NEUROTOKEN : une IA pour améliorer les aides auditives et interfaces cerveau-machine",
-      "url": "https://arxiv.org/abs/2610.00397v1",
-      "date": "2026-09-30T11:55:25.000Z",
-      "pertinence": 9,
-      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour améliorer les aides auditives en résolvant le problème de la fête cocktail.",
-      "type_handicap": "auditif",
-      "maturite": "recherche",
-      "resume": "Le modèle NEUROTOKEN utilise le décodage EEG pour identifier la source sonore qu'une personne souhaite écouter dans un environnement bruyant. En s'appuyant sur l'approche ATTUNEFLOW et des méthodes d'ensemble comme QUADTRACK, le système amplifie précisément la voix choisie. Cette avancée technologique améliore significativement la fiabilité du décodage de l'attention auditive, offrant une solution prometteuse pour la nouvelle génération d'aides auditives et d'interfaces cerveau-machine.",
-      "pourquoi_important": "Cette innovation permet aux aides auditives de mieux isoler la voix d'un interlocuteur dans des environnements bruyants, un défi majeur pour les malentendants.",
-      "resume_simple": "Cette technologie aide les appareils auditifs à isoler une voix précise dans un environnement bruyant. Elle utilise des signaux cérébraux pour comprendre qui la personne souhaite écouter. Cela rend les prothèses auditives beaucoup plus efficaces au quotidien."
-    },
-    {
-      "titre": "From Neurons to Conversation: Speech Brain-Computer Interfaces",
-      "titre_fr": "Interfaces cerveau-machine pour restaurer la parole",
-      "url": "https://arxiv.org/abs/2609.36736v1",
-      "date": "2026-09-29T05:10:57.000Z",
-      "pertinence": 10,
-      "justification_pertinence": "L'article traite directement des interfaces cerveau-machine dédiées à la restauration de la communication pour les personnes en perte de parole.",
-      "type_handicap": "parole_communication",
-      "maturite": "recherche",
-      "resume": "Cet article analyse le fonctionnement des interfaces cerveau-machine conçues pour rétablir la communication chez des personnes ayant perdu l'usage de la parole. Ces systèmes convertissent l'activité neuronale en texte ou en synthèse vocale grâce à des modèles de langage avancés et des techniques de décodage. Les auteurs soulignent l'importance d'une approche centrée sur l'utilisateur pour garantir la fiabilité et l'utilisabilité de ces neuroprothèses communicantes dans le temps.",
-      "pourquoi_important": "Il définit les priorités interdisciplinaires nécessaires pour transformer le décodage neuronal en une solution de communication fiable et expressive.",
-      "resume_simple": "Des chercheurs développent des systèmes capables de traduire l'activité cérébrale en mots ou en voix. Cette technologie aide les personnes qui ne peuvent plus parler à communiquer. L'objectif est de rendre ces outils plus naturels, stables et simples à utiliser au quotidien."
-    },
-    {
-      "titre": "Brain-Conditioned Action Policies for Neural Motor Decoding",
-      "titre_fr": "BrainVLA : décodage moteur par IA pour le contrôle d'appareils externes",
-      "url": "https://arxiv.org/abs/2609.34561v1",
-      "date": "2026-09-28T08:15:49.000Z",
-      "pertinence": 10,
-      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour permettre aux personnes paralysées de contrôler des dispositifs via une interface cerveau-machine.",
-      "type_handicap": "moteur",
-      "maturite": "recherche",
-      "resume": "Le framework BrainVLA améliore le décodage des intentions motrices à partir de l'activité cérébrale en utilisant des modèles de vision-langage-action pré-entraînés. En alignant les signaux neuronaux sur des instructions linguistiques, cette technologie permet de générer des actions précises pour assister les personnes paralysées. Les résultats montrent une meilleure efficacité de décodage par rapport aux méthodes classiques, même avec des données limitées. Cette approche facilite l'intégration de connaissances robotiques avancées dans les interfaces cerveau-machine.",
-      "pourquoi_important": "Il s'agit d'une avancée majeure pour améliorer la précision du contrôle d'appareils externes par les personnes en situation de paralysie.",
-      "resume_simple": "Ce projet utilise l'intelligence artificielle pour traduire les intentions du cerveau en mouvements réels. Il aide les personnes paralysées à piloter des outils externes plus facilement. Cette méthode est plus performante que les solutions actuelles."
+      "resume": "L'étude introduit GrammarRL, une méthode d'apprentissage par renforcement visant à optimiser la génération de texte sous contraintes grammaticales. Les chercheurs ont testé ce modèle sur la traduction de gloss en langue des signes, démontrant une amélioration significative par rapport aux méthodes de décodage classiques. Cette approche permet de maintenir une haute qualité sémantique tout en garantissant la validité syntaxique des résultats sans nécessiter de données annotées.",
+      "pourquoi_important": "Cette innovation améliore la précision et la fiabilité des systèmes de traduction automatique pour les utilisateurs de la langue des signes.",
+      "resume_simple": "Des chercheurs ont créé une méthode pour rendre les traductions automatiques en langue des signes plus précises. Ce système aide l'intelligence artificielle à mieux respecter les règles de grammaire. Cela facilite la communication pour les personnes sourdes ou malentendantes."
     }
   ]
 }
