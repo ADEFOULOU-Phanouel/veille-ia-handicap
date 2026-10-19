@@ -1,18 +1,18 @@
 {
-  "mis_a_jour": "2026-10-18",
+  "mis_a_jour": "2026-10-19",
   "articles": [
     {
       "titre": "International Multi-Centre Validation of Unsupervised Domain Adaptation for Precise Discrimination between Normal and Abnormal Retinal Development",
-      "titre_fr": "IA pour le diagnostic automatique de déficiences visuelles infantiles",
+      "titre_fr": "IA pour le diagnostic automatique de troubles du développement rétinien",
       "url": "https://arxiv.org/abs/2610.21719v1",
       "date": "2026-10-15T11:39:29.000Z",
-      "pertinence": 9,
-      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour diagnostiquer les anomalies rétiniennes liées aux troubles de la vision chez l'enfant.",
+      "pertinence": 8,
+      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour diagnostiquer des troubles causant une déficience visuelle chez l'enfant.",
       "type_handicap": "visuel",
       "maturite": "recherche",
-      "resume": "Des chercheurs ont développé un modèle d'IA capable d'analyser automatiquement des scans rétiniens pour identifier des anomalies de développement. Cette technologie permet une classification précise malgré l'utilisation de différents appareils d'imagerie médicale. L'approche facilite ainsi un diagnostic standardisé des déficiences visuelles chez les enfants, en s'affranchissant des variations techniques entre les centres d'examen. Les résultats montrent une précision élevée, confirmant le potentiel de l'IA pour améliorer le dépistage.",
-      "pourquoi_important": "Cette innovation standardise le diagnostic des troubles visuels, rendant le dépistage plus fiable et accessible quel que soit le matériel utilisé.",
-      "resume_simple": "Un nouveau programme d'intelligence artificielle aide les médecins à détecter plus facilement les problèmes de vue chez les enfants. Il analyse automatiquement les images de l'œil pour confirmer le bon développement de la rétine. Cela permet un diagnostic plus rapide et plus précis pour les jeunes patients."
+      "resume": "Des chercheurs ont développé un modèle d'apprentissage automatique capable de classer les anomalies du développement rétinien à partir d'images OCT. En utilisant l'adaptation de domaine non supervisée, cet outil permet une analyse précise et cohérente, indépendamment de l'appareil d'imagerie utilisé. Cette avancée facilite le diagnostic des déficiences visuelles infantiles en standardisant les résultats issus de centres médicaux variés et d'équipements différents sans nécessiter de données labellisées spécifiques.",
+      "pourquoi_important": "Cette innovation permet de standardiser le diagnostic des déficiences visuelles précoces en surmontant les variabilités techniques des dispositifs d'imagerie médicale.",
+      "resume_simple": "Une nouvelle intelligence artificielle aide les médecins à détecter les maladies des yeux chez les enfants. Elle analyse les examens visuels de façon très précise sur différents appareils. Cela permet un meilleur suivi médical des troubles de la vision."
     },
     {
       "titre": "A Hybrid Kinematic GCN and Elastic Transformer for Efficient Indian Sign Language Recognition",
@@ -23,22 +23,22 @@
       "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour la reconnaissance automatique de la langue des signes indienne.",
       "type_handicap": "auditif",
       "maturite": "recherche",
-      "resume": "Ce projet introduit un cadre hybride innovant pour reconnaître la langue des signes indienne malgré ses complexités gestuelles. En combinant un échantillonneur entropique et un transformateur élastique, le système préserve le rythme naturel des signes tout en modélisant la géométrie des mains. Validé par un vaste jeu de données, ce modèle offre une base performante pour traduire les signes en texte, améliorant ainsi l'accessibilité pour les personnes sourdes.",
-      "pourquoi_important": "Il résout le défi de la reconnaissance précise des signes bimanuels aux vitesses variables, facilitant la communication pour les personnes malentendantes.",
-      "resume_simple": "Ce nouvel outil d'intelligence artificielle aide à traduire la langue des signes indienne en texte. Il comprend mieux les mouvements rapides des mains et le rythme des gestes. Cela permet de rendre la communication plus accessible pour les personnes sourdes."
+      "resume": "Ce projet introduit un cadre hybride innovant pour améliorer la reconnaissance automatique de la langue des signes indienne. En utilisant un système de traitement spatial et temporel avancé, le modèle capte efficacement la complexité des mouvements des mains et du corps. Les tests effectués sur un large ensemble de données démontrent une précision remarquable de près de 90 %. Cette technologie permet de mieux traduire les signes en texte malgré des variations de vitesse.",
+      "pourquoi_important": "Cette avancée facilite la communication pour les personnes sourdes ou malentendantes en améliorant la compréhension automatique des langues des signes complexes.",
+      "resume_simple": "Des chercheurs ont créé une intelligence artificielle capable de comprendre la langue des signes indienne. Le système analyse précisément les mouvements des mains et du corps pour traduire les signes. Cette innovation aide à mieux transcrire le langage gestuel en texte."
     },
     {
       "titre": "Self-Supervised Speech Representations for Cross-Speaker Dysarthria Detection During Awake Craniotomy",
-      "titre_fr": "Détection de la dysarthrie par IA lors de craniotomies éveillées",
+      "titre_fr": "Détection automatique de la dysarthrie durant une craniotomie éveillée par IA",
       "url": "https://arxiv.org/abs/2610.11825v1",
       "date": "2026-10-08T12:25:15.000Z",
       "pertinence": 9,
-      "justification_pertinence": "L'article présente un système d'IA spécifiquement conçu pour identifier les troubles de la parole en milieu opératoire.",
+      "justification_pertinence": "L'article présente un pipeline d'IA spécifique pour détecter des troubles de la parole chez des patients en situation de handicap temporaire.",
       "type_handicap": "parole_communication",
       "maturite": "recherche",
-      "resume": "Cette étude développe un pipeline d'IA pour détecter automatiquement la dysarthrie chez les patients subissant une craniotomie éveillée. En utilisant des représentations vocales auto-supervisées et un système de classification en cascade, l'outil parvient à isoler la parole malgré le bruit ambiant du bloc opératoire. Les résultats démontrent que la qualité des représentations acoustiques surpasse la complexité des modèles pour identifier ces troubles de la parole.",
-      "pourquoi_important": "Il permet une surveillance en temps réel des fonctions langagières du patient pour prévenir des séquelles post-opératoires.",
-      "resume_simple": "Des chercheurs ont créé un outil informatique pour détecter les troubles de la parole pendant une opération du cerveau. Ce système aide les médecins à surveiller l'élocution du patient en direct. Cela permet de protéger les capacités de communication lors d'interventions chirurgicales délicates."
+      "resume": "Cette étude développe un modèle d'IA capable de détecter automatiquement la dysarthrie lors d'interventions chirurgicales au cerveau. En utilisant des représentations vocales auto-supervisées, le système parvient à isoler la parole du patient malgré les bruits ambiants du bloc opératoire. Les résultats démontrent qu'une meilleure analyse des caractéristiques vocales est plus efficace qu'un modèle complexe pour identifier les troubles de la parole en temps réel.",
+      "pourquoi_important": "Cette innovation améliore la surveillance peropératoire des fonctions langagières pour prévenir les séquelles liées aux troubles de la parole.",
+      "resume_simple": "Des chercheurs ont créé une IA pour détecter les problèmes d'élocution pendant une opération du cerveau. Le système analyse la voix du patient pour repérer immédiatement des difficultés à parler. Cela permet une meilleure sécurité lors des interventions médicales."
     }
   ]
 }
