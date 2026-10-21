@@ -1,57 +1,57 @@
 {
-  "mis_a_jour": "2026-10-20",
+  "mis_a_jour": "2026-10-21",
   "articles": [
     {
       "titre": "Stable Signer V3: 4D Deformable Primitive Splatting Is All You Need for Sign Language Production",
-      "titre_fr": "Stable Signer V3 : un système d'avatar haute résolution pour la langue des signes",
-      "url": "https://arxiv.org/abs/2610.24926v1",
+      "titre_fr": "Stable Signer V3 : un avatar haute résolution pour la langue des signes",
+      "url": "https://arxiv.org/abs/2610.24926v2",
       "date": "2026-10-18T00:28:04.000Z",
       "pertinence": 10,
-      "justification_pertinence": "L'article présente un système d'IA spécifiquement conçu pour la production de langue des signes via des avatars.",
+      "justification_pertinence": "L'article présente un système d'IA spécifiquement conçu pour la production de langue des signes.",
       "type_handicap": "auditif",
       "maturite": "recherche",
-      "resume": "Stable Signer V3 est un système d'avatar innovant utilisant le 4D Deformable Primitive Splatting pour améliorer la production de langue des signes. Grâce à des modules spécialisés, il corrige les limitations des avatars actuels en matière d'expressions faciales, de mouvements corporels et de détails visuels. Ces optimisations permettent une reconstruction plus fidèle et interactive des signes, facilitant ainsi la communication pour les utilisateurs de langue des signes.",
-      "pourquoi_important": "Cette innovation améliore significativement la qualité et le réalisme des avatars utilisés pour la traduction ou la communication en langue des signes.",
-      "resume_simple": "Ce système crée des avatars numériques capables de reproduire la langue des signes avec une grande précision. Il améliore le réalisme des visages et des mouvements du corps. Cela permet une communication plus naturelle et plus claire."
+      "resume": "Stable Signer V3 est un système d'avatar interactif utilisant le 4D Deformable Primitive Splatting pour la langue des signes. Cette technologie améliore significativement les expressions faciales, les déformations corporelles et la précision des détails visuels. Grâce à des modules d'optimisation spécifiques à l'identité, le système réduit les erreurs géométriques et de reconstruction tout en permettant une diffusion fluide et rapide des signes en temps réel.",
+      "pourquoi_important": "Cette innovation améliore la fidélité et le réalisme des avatars utilisés pour la communication par langue des signes.",
+      "resume_simple": "Ce nouvel outil crée des avatars réalistes pour la langue des signes. Il permet des mouvements du visage et du corps beaucoup plus naturels. Cela aide à mieux communiquer en utilisant les signes de manière fluide."
     },
     {
       "titre": "How Well Can LLMs Verbalize Mathematical Formulas? A Multi-Domain Evaluation",
-      "titre_fr": "Évaluation des LLM pour la verbalisation de formules mathématiques",
+      "titre_fr": "Évaluation des LLM pour la transcription vocale de formules mathématiques",
       "url": "https://arxiv.org/abs/2610.24917v1",
       "date": "2026-10-17T23:35:41.000Z",
       "pertinence": 8,
-      "justification_pertinence": "L'article évalue spécifiquement la capacité des modèles d'IA à convertir des formules mathématiques en texte audio pour les utilisateurs déficients visuels.",
+      "justification_pertinence": "L'article étudie spécifiquement l'utilisation de modèles d'IA pour améliorer l'accès aux formules mathématiques via des systèmes text-to-speech pour les utilisateurs malvoyants.",
       "type_handicap": "visuel",
       "maturite": "recherche",
-      "resume": "Cette étude analyse la performance de cinq modèles de langage pour transformer des équations LaTeX en descriptions verbales exploitables par des systèmes de synthèse vocale. Les chercheurs ont constitué un corpus spécialisé pour tester la précision des transcriptions mathématiques selon différents contextes. Les résultats indiquent que si ces outils sont prometteurs, leur efficacité varie selon la complexité des formules et la présence d'un contexte textuel associé.",
-      "pourquoi_important": "Elle améliore l'accès aux contenus scientifiques complexes pour les personnes aveugles ou malvoyantes via des technologies d'assistance vocale.",
-      "resume_simple": "Des chercheurs ont testé si l'IA peut lire à voix haute des formules mathématiques complexes. Ces outils aident les personnes malvoyantes à mieux comprendre les documents scientifiques. La technologie est encourageante mais demande encore des progrès pour être totalement précise."
+      "resume": "Cette étude analyse la capacité de cinq grands modèles de langage à transcrire des formules mathématiques complexes en descriptions textuelles. Les chercheurs ont développé un corpus spécifique pour tester ces capacités, soulignant l'importance de ces outils pour les systèmes audio destinés aux personnes déficientes visuelles. Bien que prometteuse, la performance des modèles varie significativement selon la complexité des formules et le contexte textuel fourni.",
+      "pourquoi_important": "Cette recherche optimise l'accessibilité aux contenus scientifiques complexes pour les personnes ayant une déficience visuelle grâce à l'IA.",
+      "resume_simple": "Des chercheurs testent des intelligences artificielles pour lire des formules mathématiques à voix haute. L'objectif est d'aider les personnes malvoyantes à mieux comprendre les cours de sciences. Les résultats montrent que ces outils sont performants mais encore perfectibles selon la difficulté des calculs."
     },
     {
       "titre": "BLANC: Adaptive Temporal Scheduling for Sign Language Production",
-      "titre_fr": "BLANC : ordonnancement temporel adaptatif pour la production de langue des signes",
+      "titre_fr": "BLANC : un modèle d'IA pour générer des mouvements en langue des signes",
       "url": "https://arxiv.org/abs/2610.24109v1",
       "date": "2026-10-16T18:36:26.000Z",
-      "pertinence": 9,
-      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour synthétiser la langue des signes à partir de texte.",
+      "pertinence": 10,
+      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour la production automatisée de langue des signes.",
       "type_handicap": "auditif",
       "maturite": "recherche",
-      "resume": "Le modèle BLANC utilise une architecture innovante pour générer des mouvements fluides en langue des signes à partir de texte écrit. Grâce au système LAC, l'outil gère efficacement la complexité temporelle des articulations des mains et du corps. Cette approche permet une production expressive et précise, surpassant les performances actuelles sur les jeux de données standards du domaine.",
-      "pourquoi_important": "Il permet de traduire automatiquement du texte en langue des signes avec une haute qualité gestuelle.",
-      "resume_simple": "Ce nouvel outil transforme automatiquement du texte écrit en langue des signes. Il imite précisément les mouvements complexes des mains et du corps. Cela aide à rendre l'information accessible aux personnes sourdes."
+      "resume": "Le modèle BLANC utilise une architecture innovante pour convertir du texte écrit en mouvements fluides de langue des signes. Il intègre un système de synchronisation temporelle permettant de gérer séparément la vitesse des mains et du corps afin d'obtenir un rendu naturel. Cette solution surpasse les méthodes actuelles en générant des séquences gestuelles cohérentes et adaptées à la durée variable des signes. Ces avancées facilitent la synthèse expressive de messages pour les utilisateurs sourds.",
+      "pourquoi_important": "Cette technologie améliore la communication accessible en automatisant la traduction fidèle du texte vers la langue des signes.",
+      "resume_simple": "Ce système d'intelligence artificielle traduit automatiquement des textes écrits en mouvements de langue des signes. Il permet de reproduire les gestes des mains et du corps avec une grande précision. Cela aide à rendre les contenus écrits plus accessibles aux personnes sourdes."
     },
     {
       "titre": "International Multi-Centre Validation of Unsupervised Domain Adaptation for Precise Discrimination between Normal and Abnormal Retinal Development",
-      "titre_fr": "IA pour standardiser le diagnostic des anomalies du développement rétinien",
+      "titre_fr": "IA pour la détection automatisée des anomalies du développement rétinien",
       "url": "https://arxiv.org/abs/2610.21719v1",
       "date": "2026-10-15T11:39:29.000Z",
       "pertinence": 8,
-      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour détecter les anomalies rétiniennes responsables de déficiences visuelles infantiles.",
+      "justification_pertinence": "L'article présente un modèle d'IA spécifiquement conçu pour diagnostiquer les anomalies rétiniennes responsables de déficiences visuelles infantiles.",
       "type_handicap": "visuel",
       "maturite": "recherche",
-      "resume": "Des chercheurs ont développé un modèle d'IA utilisant l'adaptation de domaine non supervisée pour analyser les scans de tomographie en cohérence optique. Cette technologie permet une classification précise du développement rétinien, même lorsque les données proviennent de systèmes d'imagerie différents. Cette avancée facilite le diagnostic standardisé des déficiences visuelles infantiles à grande échelle, réduisant ainsi les variations liées aux équipements médicaux utilisés dans divers centres cliniques.",
-      "pourquoi_important": "Cette innovation améliore la fiabilité du diagnostic automatisé des pathologies oculaires infantiles à travers des appareils variés.",
-      "resume_simple": "Ce modèle d'IA analyse les images des yeux pour repérer des problèmes de vue chez les enfants. Il fonctionne sur différents types d'appareils médicaux sans nécessiter de réglages complexes. Cela aide les médecins à diagnostiquer plus précisément les anomalies de la rétine."
+      "resume": "Des chercheurs ont développé un modèle d'apprentissage automatique capable de classifier les anomalies du développement rétinien à partir d'images OCT. En utilisant une technique d'adaptation de domaine non supervisée, le système maintient une grande précision sur divers appareils d'imagerie sans nécessiter de nouvelles données annotées. Cette innovation facilite une évaluation standardisée et fiable pour identifier les causes de déficience visuelle chez l'enfant à grande échelle.",
+      "pourquoi_important": "Cette technologie permet de standardiser le diagnostic des pathologies rétiniennes malgré la diversité des équipements médicaux.",
+      "resume_simple": "Ce nouvel outil d'intelligence artificielle aide à repérer plus facilement les anomalies oculaires chez les enfants. Il fonctionne sur différents types de scanners médicaux sans réglages complexes. Cela permet un meilleur suivi pour prévenir et mieux gérer les troubles de la vue."
     }
   ]
 }
